@@ -37,6 +37,15 @@ namespace ConsoleApp1
             while (guess != winningNumber)       
             {
                 string input = Console.ReadLine();
+
+                if (!int.TryParse(input, out guess))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("You have to type a number.");
+                    Console.ResetColor();
+
+                    continue;
+                }
                 guess = Int32.Parse(input);
                 guesses += 1;
 

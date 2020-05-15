@@ -37,6 +37,7 @@ namespace ConsoleApp1
             while (guess != winningNumber)       
             {
                 string input = Console.ReadLine();
+
                 if (!int.TryParse(input, out guess))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
